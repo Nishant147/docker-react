@@ -1,0 +1,9 @@
+FROM node:17.6-alpine
+USER node
+WORKDIR /app
+COPY ./package.json ./
+RUN npm install
+EXPOSE 3000
+#COPY ./src ./src
+#COPY ./public ./public
+CMD ["npm", "run", "start"]
